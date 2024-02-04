@@ -4,7 +4,8 @@ const bodyParser = require('body-parser');
 const mongoose = require('./utils/database');
 const jwt = require('jsonwebtoken');
 
-const users = require('./app/securityService/UserRoute.js');
+const users = require('./app/securityService/user/UserRoute.js');
+const jobDetail = require('./app/employeeService/jobDetail/UserJobDetailRoute.js');
 
 
 const app = express();
@@ -21,5 +22,7 @@ app.get('/', function(req, res){
 });
 
 app.use('/users', users);
+
+app.use('/job_details', jobDetail);
 
 app.listen(3000, function(){ console.log('Server is listening on port 3000');});
