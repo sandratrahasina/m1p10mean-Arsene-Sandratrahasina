@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 
 require('dotenv').config();
 
-const PROFIL_ROLE = require('../../securityService/role/role');
+const PROFIL_ROLE = require('../role/role');
 const jobDetail = require('../../employeeService/jobDetail/UserJobDetailSchema');
 
 

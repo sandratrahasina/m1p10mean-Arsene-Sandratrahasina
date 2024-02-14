@@ -17,7 +17,7 @@ module.exports = {
         jobDetail.findByIdAndUpdate(req.body._id, {
             userDescription : req.body.userDescription,
             profilPhotoUrl : req.body.profilPhotoUrl,
-            portfolioPictureUrl : req.portfolioPictureUrl
+            portfolioPictureUrl : req.body.portfolioPictureUrl
         }).then((result) => {
             res.json({status: "success", message: ` ${req.body.employee.username} , your emloyee information has been updated with success`, data: result});
         }).catch((err) => {
