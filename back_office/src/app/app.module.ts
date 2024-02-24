@@ -5,10 +5,10 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared.module';
 import { AppRouteModule } from './app-route.module';
 
-
-
 @NgModule({
-  declarations: [],
+  declarations: [
+    AppComponent
+  ],
   imports: [
     CommonModule,
     SharedModule,

@@ -8,15 +8,17 @@ import { ServiceDetailsComponent } from './pages/services-catalog/service-detail
 import { ServiceListComponent } from './pages/services-catalog/service-list/service-list.component'; 
 import { StaffDetailsComponent } from './pages/staff/staff-details/staff-details.component'; 
 import { StaffListComponent } from './pages/staff/staff-list/staff-list.component';
+import { AppComponent } from './app.component'; 
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent },
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'appointment-details', component: AppointmentDetailsComponent },
   { path: 'appointment-list', component: AppointmentListComponent },
   { path: 'service-details', component: ServiceDetailsComponent },
   { path: 'service-list', component: ServiceListComponent },
   { path: 'staff-details', component: StaffDetailsComponent },
   { path: 'staff-list', component: StaffListComponent },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ];
 
 @NgModule({
