@@ -6,27 +6,58 @@
     [(nzCollapsed)]="isCollapsed"
     [nzTrigger]="null">
     <div class="sidebar-logo">
-      <img src="../assets/barber-shop-logo-1.png" alt="logo">
-      <h1>Volombava</h1>
+      <a target="_blank">
+        <img src="../assets/barber-shop-logo-1.png" alt="logo">
+        <h1>Barber shop</h1>
+      </a>
     </div>
     <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
       <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/staff-list">Welcome</a>
+            <a routerLink="/welcome">Appointment</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/staff-list">Monitor</a>
+            <a>Client</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a>Workplace</a>
+            <a>Staff work force</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Dashboard</a>
           </li>
         </ul>
       </li>
-      <li nz-submenu nzOpen nzTitle="Form" nzIcon="form">
+      <li nz-submenu nzOpen nzTitle="Staff" nzIcon="form">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a>Basic Form</a>
+            <a>Manage profile</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>All staff</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Manage staff</a>
+          </li>
+        </ul>
+      </li>
+      <li nz-submenu nzOpen nzTitle="Catalog" nzIcon="form">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a>Manage services</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>All services</a>
+          </li>
+        </ul>
+      </li>
+      <li nz-submenu nzOpen nzTitle="Appointment" nzIcon="form">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a>In progress</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Appointment history</a>
           </li>
         </ul>
       </li>
@@ -36,10 +67,10 @@
     <nz-header>
       <div class="app-header">
         <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
-          <span class="trigger"
-            nz-icon
-            [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
-          ></span>
+            <span class="trigger"
+               nz-icon
+               [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+            ></span>
         </span>
       </div>
     </nz-header>
